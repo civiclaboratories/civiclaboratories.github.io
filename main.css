@@ -1,0 +1,100 @@
+/* The palette was gotten by plugging #ff8b38 into Agave.
+
+   #ff8b38 for accent backgrounds
+   #a85c25 for borders and stuff
+   #542e13 for heading text
+
+   #eee for gray backgrounds (wells and such)
+   #bbb for rules and shadows
+*/
+
+body {
+	background-color: #eee;
+	margin: auto;
+	font-family: sans-serif;
+}
+
+h1 {
+	margin: 0;
+}
+
+p {
+	font-size: 0.9rem;
+	line-height: 1.4rem;
+}
+
+header {
+	background-color: #ff8b38;
+	border-bottom: 1px solid #a85c25;
+	text-align: center;
+	padding: 2rem 0;
+	box-shadow: 0 3px 5px #bbb;
+	background-image: url(skyline.png);
+	background-position: 50% 105%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+hr {
+	border: none;
+	background-color: #bbb;
+	height: 1px;
+}
+
+.content {
+	padding: 0 1rem;
+}
+
+.brand .name {
+	font-size: 3rem;
+	display: block;
+	font-family: sans-serif;
+	font-weight: normal;
+	color: #542e13;
+}
+
+svg#glider #steps-outline {
+	fill-opacity:0;
+	stroke:#a85c25;
+	stroke-width:1;
+	stroke-linejoin:round;
+	stroke-miterlimit:4;
+	stroke-opacity:1;
+	stroke-dasharray:none
+}
+
+svg#glider #steps-background {
+	fill:#eee;
+	fill-opacity:1;
+}
+
+svg#glider #steps-inset-shadow {
+	fill: #bbb;
+}
+
+@media (min-width: 50rem) {
+	header {
+		padding: 5rem 0;
+	}
+
+	.brand .name {
+		line-height: 51px;
+		vertical-align: top;
+		display: inline-block;
+
+		font-size: 48px;
+		font-family: sans-serif;
+		font-weight: normal;
+	}
+
+	.content {
+		width: 48rem;
+		margin: 1em auto;
+	}
+}
+
+@media (min-width: 1176px) {
+	header {
+		background-size: 1176px;
+	}
+}

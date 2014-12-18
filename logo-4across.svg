@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="main.css" type="text/css"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="242"
+   height="50"
+   id="glider">
+
+  <defs>
+    <g id="steps" transform="translate(0.5,0.5)">
+      <path
+         d="m 0,0 0,16 16,0 0,-16 -16,0 z
+            m 16,16 0,16 0,16 16,0 0,-16 16,0 0,-16 0,-16 -16,0 0,16 -16,0 z"
+         id="step1" />
+      <path
+         d="m 64,16 16,0 0,16 -16,0 0,-16 z
+            m 16,16 16,0 0,-32 16,0 0,48 -16,0 -16,0 0,-16 z"
+         id="step2" />
+      <path
+         d="m 128,0 16,0 0,16 -16,0 0,-16 z
+            m 16,16 16,0 16,0 0,16 -16,0 0,16 -16,0 -16,0 0,-16 16,0 0,-16 z"
+         id="step3" />
+      <path
+         d="m 208,0 0,16 16,0 0,-16 -16,0 z
+            m 16,16 0,16 -32,0 0,16 48,0 0,-16 0,-16 -16,0 z"
+         id="step4" />
+    </g>
+
+    <filter id="outer-shadow" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="3" dy="3" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="1" />
+      <feComposite result="maskOut" in="SourceGraphic" in2="blurOut" operator="out" />
+      <!-- <feBlend in="SourceGraphic" in2="blurOut" mode="normal" /> -->
+    </filter>
+  </defs>
+
+  <use xlink:href="#steps" id="steps-background" />
+  <use xlink:href="#steps" id="steps-inset-shadow" filter="url(#outer-shadow)" />
+  <use xlink:href="#steps" id="steps-outline" />
+</svg>
